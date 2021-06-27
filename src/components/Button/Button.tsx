@@ -2,10 +2,10 @@
  * @Author: Vir
  * @Date: 2021-06-26 20:02:09
  * @Last Modified by: Vir
- * @Last Modified time: 2021-06-27 16:09:51
+ * @Last Modified time: 2021-06-27 21:40:07
  */
 /** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import { css } from "@emotion/react";
 import React from "react";
 import { ButtonProps } from "./interface";
 
