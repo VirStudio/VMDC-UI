@@ -1,7 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const WebpackBar = require("webpackbar"); // build显示进度
-const { CleanWebpackPlugin } = require("clean-webpack-plugin"); //打包时清理之前打包的文件
+// const { CleanWebpackPlugin } = require("clean-webpack-plugin"); //打包时清理之前打包的文件
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const devMode = process.env.NODE_ENV !== "production";
@@ -68,5 +68,8 @@ module.exports = {
       },
     ],
   },
-  plugins: [new WebpackBar(), new CleanWebpackPlugin()],
+  plugins: [
+    new WebpackBar(),
+    // new CleanWebpackPlugin()
+  ],
 };
