@@ -18,4 +18,5 @@ export interface ButtonProps extends HTMLButtonElement {
   type?: ButtonTypes;
   color?: ButtonColors;
   size?: ButtonSize;
+  children?: React.ReactNode;
 }
