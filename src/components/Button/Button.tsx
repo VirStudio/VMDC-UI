@@ -2,19 +2,19 @@
  * @Author: Vir
  * @Date: 2021-06-26 20:02:09
  * @Last Modified by: Vir
- * @Last Modified time: 2021-06-28 16:09:02
+ * @Last Modified time: 2021-07-04 16:20:45
  */
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import React from "react";
 import { ButtonProps } from "./interface";
 
-export const Button: React.FC<ButtonProps> = ({ children, type, ...props }) => {
+const Button: React.FC<ButtonProps> = ({ children, type, ...props }) => {
   const contained = css`
     background-color: rgb(95, 95, 95);
     color: white;
   `;
-  const vmdcBtn = css`
+  const ButtonBaseCss = css`
     border-radius: 4px;
     padding: 8px 22px;
     font-size: 12px;
@@ -27,8 +27,10 @@ export const Button: React.FC<ButtonProps> = ({ children, type, ...props }) => {
     ${type === "contained" ? contained : ""}
   `;
   return (
-    <button type="button" css={vmdcBtn}>
+    <button type="button" css={ButtonBaseCss}>
       {children}
     </button>
   );
 };
+
+export default Button;

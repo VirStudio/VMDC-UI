@@ -2,12 +2,12 @@
  * @Author: Vir
  * @Date: 2021-06-27 13:16:16
  * @Last Modified by: Vir
- * @Last Modified time: 2021-06-28 18:02:06
+ * @Last Modified time: 2021-06-30 21:45:03
  */
 
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { Button } from "../../../src/components/Button/Button";
+import Button from "../../../src/components/Button/Button";
 import { ButtonProps } from "../../../src/components/Button/interface";
 
 export default {
