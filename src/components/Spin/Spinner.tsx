@@ -2,10 +2,9 @@
  * @Author: Vir
  * @Date: 2021-07-11 11:45:36
  * @Last Modified by: Vir
- * @Last Modified time: 2021-07-11 12:22:31
+ * @Last Modified time: 2021-07-14 13:50:40
  */
-/** @jsxImportSource @emotion/react */
-import { css, keyframes } from "@emotion/react";
+import { css, keyframes } from "@emotion/css";
 import React from "react";
 import { SpinnerCSSProps, SpinnerProps } from "./interface";
 
@@ -42,7 +41,7 @@ const SpinnerBaseCSS = ({ size = "medium", ...props }: SpinnerCSSProps) => {
 };
 
 const Spinner: React.FC<SpinnerProps> = ({ size = "medium", ...props }) => {
-  return <i css={SpinnerBaseCSS({ size })} />;
+  return <i className={SpinnerBaseCSS({ size })} />;
 };
 
 export default Spinner;

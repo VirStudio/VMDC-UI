@@ -2,11 +2,11 @@
  * @Author: Vir
  * @Date: 2021-06-30 21:43:55
  * @Last Modified by: Vir
- * @Last Modified time: 2021-07-04 16:47:55
+ * @Last Modified time: 2021-07-14 13:49:07
  */
-/** @jsxImportSource @emotion/react */
 
-import { css } from "@emotion/react";
+import { css } from "@emotion/css";
+import React from "react";
 import { ListProps } from "./interface";
 
 const List: React.FC<ListProps> = (props) => {

@@ -2,7 +2,7 @@
  * @Author: Vir
  * @Date: 2021-06-27 15:36:01
  * @Last Modified by: Vir
- * @Last Modified time: 2021-07-04 16:22:23
+ * @Last Modified time: 2021-07-14 14:27:41
  */
 
 import { BaseSize } from "../../types/global";
@@ -17,8 +17,8 @@ export type ButtonColors = "default" | "primary" | "danger";
 export type ButtonSize = BaseSize;
 
 export interface ButtonProps extends HTMLButtonElement {
-  type?: ButtonTypes;
+  type: ButtonTypes;
   color?: ButtonColors;
   size?: ButtonSize;
-  children?: React.ReactNode;
+  children: HTMLCollection;
 }
