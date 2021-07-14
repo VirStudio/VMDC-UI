@@ -8,5 +8,8 @@
 # history
 /.history
 
+# docz
+/.docz
+
 # dist
 /dist

@@ -2,10 +2,9 @@
  * @Author: Vir
  * @Date: 2021-06-26 20:02:09
  * @Last Modified by: Vir
- * @Last Modified time: 2021-07-04 16:20:45
+ * @Last Modified time: 2021-07-13 16:46:11
  */
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css } from "@emotion/css";
 import React from "react";
 import { ButtonProps } from "./interface";
 
@@ -27,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({ children, type, ...props }) => {
     ${type === "contained" ? contained : ""}
   `;
   return (
-    <button type="button" css={ButtonBaseCss}>
+    <button type="button" className={ButtonBaseCss}>
       {children}
     </button>
   );
