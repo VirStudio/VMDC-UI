@@ -26,6 +26,13 @@ const SpinIndicatorCss = () => {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 4;
+  `;
+};
+
+const SpinContentCss = () => {
+  return css`
+    opacity: 0.5;
   `;
 };
 
@@ -48,7 +55,7 @@ const InternalSpin: React.FC<SpinProps> = ({
       {children ? (
         <div className={SpinBaseCss()}>
           <div className={SpinIndicatorCss()}>{renderIcon()}</div>
-          {children}
+          <div className={SpinContentCss()}>{children}</div>
         </div>
       ) : (
         renderIcon()
