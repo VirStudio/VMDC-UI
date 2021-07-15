@@ -5,15 +5,15 @@
  * @Last Modified time: 2021-07-12 17:56:48
  */
 
-import React from "react";
-import { SpinProps } from "./interface";
-import Spinner from "./Spinner";
+import React from 'react';
+import { SpinProps } from './interface';
+import Spinner from './Spinner';
 
 const Spin: React.FC<SpinProps> = (props) => {
   return (
-    <div style={{ background: "#D35400", padding: "200px" }}>
+    <div style={{ background: '#D35400', padding: '200px' }}>
       <Spinner />
     </div>
   );
 };
-export default Spin;
+export { Spin };

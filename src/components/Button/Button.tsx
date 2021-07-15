@@ -4,9 +4,9 @@
  * @Last Modified by: Vir
  * @Last Modified time: 2021-07-13 16:46:11
  */
-import { css } from "@emotion/css";
-import React from "react";
-import { ButtonProps } from "./interface";
+import { css } from '@emotion/css';
+import React from 'react';
+import { ButtonProps } from './interface';
 
 const Button: React.FC<ButtonProps> = ({ children, type, ...props }) => {
   const contained = css`
@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({ children, type, ...props }) => {
     background-color: white;
     border-color: #d9d9d9;
     cursor: pointer;
-    ${type === "contained" ? contained : ""}
+    ${type === 'contained' ? contained : ''}
   `;
   return (
     <button type="button" className={ButtonBaseCss}>

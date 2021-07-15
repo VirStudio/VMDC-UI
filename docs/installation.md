@@ -1,9 +1,9 @@
 ---
-id: installation
 title: 安装
+order: 1
 ---
 
-## 使用
+## 安装
 
 ```cmd
 yarn add vmdc-ui

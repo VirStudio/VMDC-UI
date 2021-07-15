@@ -5,36 +5,38 @@
  * @Last Modified time: 2021-07-11 20:33:03
  */
 
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
-import React from "react";
-import { TextOverflowProps } from "./interface";
+import { css } from '@emotion/css';
+import React from 'react';
+import { TextOverflowProps } from './interface';
 
 const Overflow: React.FC<TextOverflowProps> = ({
-  element = "p",
+  element = 'p',
   row = 1,
   children,
   ...props
 }) => {
-  const TextOverflowBaseCss = css`
-    width: 100%;
+  const singleCss = css`
+    white-space: nowrap;
   `;
-  const TextOverflowContentCss = css`
-    width: inherit;
+  const multiCss = css`
+    text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: ${row};
     -webkit-box-orient: vertical;
-    text-align: justify;
-    overflow: ellipsis;
+    white-space: pre-wrap;
+  `;
+  const TextOverflowBaseCss = css`
+    width: 100%;
     > * {
-      width: inherit;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      ${row === 1 ? singleCss : multiCss}
     }
   `;
   return (
-    <div css={TextOverflowBaseCss}>
-      <div css={TextOverflowContentCss}>
-        {React.createElement(element, {}, children)}
-      </div>
+    <div className={TextOverflowBaseCss}>
+      {React.createElement(element, {}, children)}
     </div>
   );
 };
