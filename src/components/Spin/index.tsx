@@ -5,15 +5,17 @@
  * @Last Modified time: 2021-07-12 17:56:48
  */
 
-import React from 'react';
-import { SpinProps } from './interface';
+import InternalSpin from './Spin';
 import Spinner from './Spinner';
 
-const Spin: React.FC<SpinProps> = (props) => {
-  return (
-    <div style={{ background: '#D35400', padding: '200px' }}>
-      <Spinner />
-    </div>
-  );
-};
+type InternalSpinType = typeof InternalSpin;
+
+interface SpinInterface extends InternalSpinType {
+  Spinner: typeof Spinner;
+}
+
+const Spin = InternalSpin as SpinInterface;
+
+Spin.Spinner = Spinner;
+
 export { Spin };
