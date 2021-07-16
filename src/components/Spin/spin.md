@@ -27,11 +27,17 @@ export default () => <div style={{background: 'red', padding: '10px'}}>
 
 ```jsx
 import React from 'react';
-import { Spin }from 'vmdc-ui';
+import { Spin, Button }from 'vmdc-ui';
 
-export default () => <Spin>
-  <div style={{background: 'green', padding: '200px'}}></div>
-</Spin>
+const [spinning, setSpinning] = React.useState(false);
+
+export default () =>
+<div>
+  <Spin spinning={spinning}>
+    <div style={{background: 'green', padding: '200px'}}></div>
+  </Spin>
+  <Button type="contained" onClick={()=> setSpinning(!spinning)}>{spinning ? '加载中' : '加载完成'}</Button>
+</div>
 ```
 
 ## 单独使用指示器

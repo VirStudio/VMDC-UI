@@ -5,7 +5,7 @@
  * @Last Modified time: 2021-07-12 17:56:48
  */
 
-import { css } from '@emotion/css';
+import { css, keyframes } from '@emotion/css';
 import React from 'react';
 import { SpinProps } from './interface';
 import Spinner from './Spinner';
@@ -16,7 +16,18 @@ const SpinBaseCss = () => {
   `;
 };
 
-const SpinIndicatorCss = () => {
+const SpinKeyframes = (opa1: number = 1, opa2: number = 1) => {
+  return keyframes`
+    0% {
+      opacity: ${opa1};
+    }
+    100% {
+      opacity: ${opa2};
+    }
+  `;
+};
+
+const SpinIndicatorCss = (spinning: boolean) => {
   return css`
     position: absolute;
     left: 0;
@@ -27,22 +38,35 @@ const SpinIndicatorCss = () => {
     justify-content: center;
     align-items: center;
     z-index: 4;
+    animation: ${SpinKeyframes(0, 1)} 0.3s 1 ease-in-out
+      ${spinning ? 'normal' : 'reverse'} forwards;
   `;
 };
 
-const SpinContentCss = () => {
+const SpinContentCss = (spinning: boolean) => {
   return css`
-    opacity: 0.5;
+    animation: ${SpinKeyframes(0.5)} 0.3s 1 ease-in-out
+      ${spinning ? 'reverse' : 'normal'} forwards;
   `;
 };
 
 const InternalSpin: React.FC<SpinProps> = ({
-  spinning,
+  spinning = false,
   children,
-  size,
+  size = 'medium',
   indicator,
+  type = 'spinner',
   ...props
 }) => {
+  const delay = 100; // 指示器延迟
+  const [staticSpinning, setStaticSpinning] = React.useState(false);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setStaticSpinning(spinning);
+    }, delay);
+  }, [spinning]);
+
   const renderIcon = () => {
     if (indicator) {
       return indicator;
@@ -54,8 +78,10 @@ const InternalSpin: React.FC<SpinProps> = ({
     <>
       {children ? (
         <div className={SpinBaseCss()}>
-          <div className={SpinIndicatorCss()}>{renderIcon()}</div>
-          <div className={SpinContentCss()}>{children}</div>
+          {staticSpinning && (
+            <div className={SpinIndicatorCss(spinning)}>{renderIcon()}</div>
+          )}
+          <div className={SpinContentCss(spinning)}>{children}</div>
         </div>
       ) : (
         renderIcon()

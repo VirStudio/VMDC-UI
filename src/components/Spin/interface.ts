@@ -44,7 +44,7 @@ export interface SpinProps {
   size?: Size;
   /**
    * @description       指示器类型
-   * @default           spinner
+   * @default
    */
   type?: SpinType;
 }
