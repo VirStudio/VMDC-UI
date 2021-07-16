@@ -1,5 +1,9 @@
 ---
 title: Button 按钮
+nav:
+  path: /components
+  title: 组件
+  order: 1
 group:
   path: /basic
   title: 基础

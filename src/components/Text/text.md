@@ -1,5 +1,9 @@
 ---
 title: Text 文字
+nav:
+  path: /components
+  title: 组件
+  order: 1
 group:
   path: /basic
   title: 基础

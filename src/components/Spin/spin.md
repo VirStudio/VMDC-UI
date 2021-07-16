@@ -1,5 +1,9 @@
 ---
 title: Spin 加载中
+nav:
+  path: /components
+  title: 组件
+  order: 1
 group:
   path: /feedback
   title: 反馈
