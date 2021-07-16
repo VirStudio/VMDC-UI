@@ -2,7 +2,7 @@
  * @Author: Vir
  * @Date: 2021-07-16 14:26:31
  * @Last Modified by: Vir
- * @Last Modified time: 2021-07-16 15:11:22
+ * @Last Modified time: 2021-07-16 15:53:41
  */
 
 import { css } from '@emotion/css';
@@ -20,15 +20,26 @@ const ScrollSnapBaseCss = (
 };
 
 const InternalScrollSnap: React.FC<ScrollSnapProps> = ({
-  location,
-  type,
+  location = 'both',
+  type = 'mandatory',
   children,
+  align = 'center',
+  stop = 'always',
   ...props
 }) => {
-  console.log(children);
   return (
     <div className={ScrollSnapBaseCss(location, type)} {...props}>
-      {children}
+      {React.Children.map(children, (child) => {
+        if (child.type.name !== 'Item') {
+          throw new Error(
+            'the children of component ScrollSnap muse be component ScrollSnap.Item',
+          );
+        }
+        return React.cloneElement(child, {
+          ...child.props,
+          ...{ align, stop },
+        });
+      })}
     </div>
   );
 };
