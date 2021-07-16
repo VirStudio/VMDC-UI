@@ -7,7 +7,7 @@ nav:
 group:
   path: /feedback
   title: 反馈
-  order: 2
+  order: 3
 ---
 
 ## 基础
@@ -71,7 +71,7 @@ const {Spinner} = Spin;
 import React from 'react';
 import { Spin }from 'vmdc-ui';
 
-const {Spinner} = Spin;
+const { Spinner } = Spin;
 
 export default () => <div style={{background: 'red', padding: '10px'}}>
   <Spinner />
