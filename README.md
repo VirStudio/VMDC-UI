@@ -13,3 +13,7 @@ Material Design 风格的 React UI 库。
 ``` cmd
 yarn add vmdc-ui
 ```
+
+## 文档地址
+
+[VMDC UI 中文文档](https://virstudio.github.io/VMDC-UI/)

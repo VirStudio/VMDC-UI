@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({ children, type, ...props }) => {
     ${type === 'contained' ? contained : ''}
   `;
   return (
-    <button type="button" className={ButtonBaseCss}>
+    <button type="button" className={ButtonBaseCss} {...props}>
       {children}
     </button>
   );
