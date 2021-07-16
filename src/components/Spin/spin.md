@@ -43,13 +43,14 @@ export default () =>
 import React from 'react';
 import { Spin, Button }from 'vmdc-ui';
 
-const [spinning, setSpinning] = React.useState(false);
+const [spinning, setSpinning] = React.useState(true);
 
 export default () =>
 <div>
   <Spin spinning={spinning}>
     <div style={{background: 'green', padding: '200px'}}></div>
   </Spin>
+  <p>点击按钮切换加载状态</p>
   <Button type="contained" onClick={()=> setSpinning(!spinning)}>{spinning ? '加载中' : '加载完成'}</Button>
 </div>
 ```
@@ -74,6 +75,27 @@ const {Spinner} = Spin;
 
 export default () => <div style={{background: 'red', padding: '10px'}}>
   <Spinner />
+</div>
+```
+
+## 不同大小
+
+<Alert type="info">
+  通过设置 size 属性改变指示器的大小，同时size也适用于单独的指示器
+</Alert>
+
+```jsx
+import React from 'react';
+import { Spin }from 'vmdc-ui';
+
+export default () =>
+<div style={{background: '#30dff3', padding: '10px'}}>
+  <p style={{color: '#fff'}}>Small</p>
+  <Spin size="small" />
+  <p style={{color: '#fff'}}>Medium</p>
+  <Spin size="medium" />
+  <p style={{color: '#fff'}}>Large</p>
+  <Spin size="large" />
 </div>
 ```
 
