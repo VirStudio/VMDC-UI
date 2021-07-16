@@ -2,7 +2,7 @@
  * @Author: Vir
  * @Date: 2021-07-05 17:40:33
  * @Last Modified by: Vir
- * @Last Modified time: 2021-07-11 20:33:03
+ * @Last Modified time: 2021-07-16 16:40:42
  */
 
 import { css } from '@emotion/css';
@@ -19,11 +19,10 @@ const Overflow: React.FC<TextOverflowProps> = ({
     white-space: nowrap;
   `;
   const multiCss = css`
-    text-overflow: ellipsis;
+    white-space: normal;
     display: -webkit-box;
     -webkit-line-clamp: ${row};
     -webkit-box-orient: vertical;
-    white-space: pre-wrap;
   `;
   const TextOverflowBaseCss = css`
     width: 100%;
