@@ -27,6 +27,20 @@ export default () => <div style={{background: 'red', padding: '10px'}}>
 
 ```jsx
 import React from 'react';
+import { Spin }from 'vmdc-ui';
+
+export default () =>
+  <Spin spinning={true}>
+    <div style={{background: 'green', padding: '200px'}}></div>
+  </Spin>
+```
+
+## 切换状态
+
+设置 spinning 参数切换加载状态
+
+```jsx
+import React from 'react';
 import { Spin, Button }from 'vmdc-ui';
 
 const [spinning, setSpinning] = React.useState(false);
