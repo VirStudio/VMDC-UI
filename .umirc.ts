@@ -10,6 +10,7 @@ export default defineConfig({
     ['en-US', 'English'],
   ],
   base: '/VMDC-UI',
+  publicPath: '/VMDC-UI/',
   mode: 'site',
   navs: {
     // 多语言 key 值需与 locales 配置中的 key 一致
