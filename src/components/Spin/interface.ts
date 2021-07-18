@@ -2,24 +2,27 @@
  * @Author: Vir
  * @Date: 2021-07-11 11:47:52
  * @Last Modified by: Vir
- * @Last Modified time: 2021-07-12 17:49:03
+ * @Last Modified time: 2021-07-18 15:07:24
  */
 
 import { ReactNode } from 'react';
 import { BaseSize, BaseType } from '../../types/global';
 
-export type Size = BaseSize;
-
 export interface SpinnerProps {
-  size?: Size;
+  size?: BaseSize;
   type?: BaseType;
 }
 
 export interface SpinnerCSSProps {
-  size?: Size;
+  size?: BaseSize;
 }
 
-export type SpinType = 'spinner';
+export interface SkChaseProps {
+  size?: BaseSize;
+  type?: BaseType;
+}
+
+export type SpinType = 'spinner' | 'skchase';
 
 export interface SpinProps {
   /**
@@ -41,7 +44,7 @@ export interface SpinProps {
    * @description       指示器大小
    * @default
    */
-  size?: Size;
+  size?: BaseSize;
   /**
    * @description       指示器类型
    * @default
