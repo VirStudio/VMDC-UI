@@ -78,6 +78,23 @@ export default () => <div style={{background: 'red', padding: '10px'}}>
 </div>
 ```
 
+## 不同的指示器
+
+```jsx
+import React from 'react';
+import { Spin } from 'vmdc-ui';
+
+const { Spinner, SkChase } = Spin;
+
+export default () =>
+<div style={{background: 'blue', padding: '10px'}}>
+  <p style={{color: '#fff'}}>Spinner</p>
+  <Spinner />
+  <p style={{color: '#fff'}}>SkChase</p>
+  <SkChase />
+</div>
+```
+
 ## 不同大小
 
 <Alert type="info">
