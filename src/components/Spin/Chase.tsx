@@ -2,16 +2,16 @@
  * @Author: Vir
  * @Date: 2021-07-18 15:05:04
  * @Last Modified by: Vir
- * @Last Modified time: 2021-07-18 21:52:18
+ * @Last Modified time: 2021-07-18 21:54:48
  */
 
 import { BaseSize } from '@/types/global';
 import { css, keyframes } from '@emotion/css';
 import React from 'react';
 import { SizeMap } from './config';
-import { SkChaseProps } from './interface';
+import { ChaseProps } from './interface';
 
-const SkChaseDotDelayCss = () => {
+const ChaseDotDelayCss = () => {
   return [1, 2, 3, 4, 5, 6].map((i) => {
     return css`
       &:nth-child(${i}) {
@@ -21,7 +21,7 @@ const SkChaseDotDelayCss = () => {
   });
 };
 
-const SkChaseDotBeforeDelayCss = () => {
+const ChaseDotBeforeDelayCss = () => {
   return [1, 2, 3, 4, 5, 6].map((i) => {
     return css`
       &:nth-child(${i})::before {
@@ -31,7 +31,7 @@ const SkChaseDotBeforeDelayCss = () => {
   });
 };
 
-const SkChaseKeyframes = () => {
+const ChaseKeyframes = () => {
   return keyframes`
     100% {
       transform: rotate(360deg);
@@ -39,7 +39,7 @@ const SkChaseKeyframes = () => {
   `;
 };
 
-const SkChaseDotKeyframes = () => {
+const ChaseDotKeyframes = () => {
   return keyframes`
     80%, 100% {
       transform: rotate(360deg);
@@ -47,7 +47,7 @@ const SkChaseDotKeyframes = () => {
   `;
 };
 
-const SkChaseDotBeforeKeyframes = () => {
+const ChaseDotBeforeKeyframes = () => {
   return keyframes`
     50% {
       transform: scale(0.4);
@@ -58,14 +58,14 @@ const SkChaseDotBeforeKeyframes = () => {
   `;
 };
 
-const SkChaseDotCss = () => {
+const ChaseDotCss = () => {
   return css`
     position: absolute;
     width: 100%;
     height: 100%;
-    animation: ${SkChaseDotKeyframes()} 2s infinite ease-in-out both;
-    ${SkChaseDotDelayCss()}
-    ${SkChaseDotBeforeDelayCss()}
+    animation: ${ChaseDotKeyframes()} 2s infinite ease-in-out both;
+    ${ChaseDotDelayCss()}
+    ${ChaseDotBeforeDelayCss()}
     &::before {
       content: '';
       display: block;
@@ -73,28 +73,28 @@ const SkChaseDotCss = () => {
       height: 25%;
       border-radius: 100%;
       background-color: white;
-      animation: ${SkChaseDotBeforeKeyframes()} 2s infinite ease-in-out both;
+      animation: ${ChaseDotBeforeKeyframes()} 2s infinite ease-in-out both;
     }
   `;
 };
 
-const SkChaseBaseCss = (size: BaseSize = 'medium') => {
+const ChaseBaseCss = (size: BaseSize = 'medium') => {
   return css`
     width: ${SizeMap[size]}px;
     height: ${SizeMap[size]}px;
     position: relative;
-    animation: ${SkChaseKeyframes()} 2.5s infinite linear both;
+    animation: ${ChaseKeyframes()} 2.5s infinite linear both;
   `;
 };
 
-const SkChase: React.FC<SkChaseProps> = ({ size, ...props }) => {
+const Chase: React.FC<ChaseProps> = ({ size, ...props }) => {
   return (
-    <div className={SkChaseBaseCss(size)}>
+    <div className={ChaseBaseCss(size)}>
       {[1, 2, 3, 4, 5, 6].map((i) => (
-        <div key={i} className={SkChaseDotCss()}></div>
+        <div key={i} className={ChaseDotCss()}></div>
       ))}
     </div>
   );
 };
 
-export default SkChase;
+export default Chase;

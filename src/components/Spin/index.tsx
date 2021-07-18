@@ -2,10 +2,10 @@
  * @Author: Vir
  * @Date: 2021-07-12 17:36:17
  * @Last Modified by: Vir
- * @Last Modified time: 2021-07-18 15:35:56
+ * @Last Modified time: 2021-07-18 21:54:30
  */
 
-import SkChase from './SkChase';
+import SkChase from './Chase';
 import InternalSpin from './Spin';
 import Spinner from './Spinner';
 

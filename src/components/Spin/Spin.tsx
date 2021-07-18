@@ -2,13 +2,13 @@
  * @Author: Vir
  * @Date: 2021-07-12 17:36:17
  * @Last Modified by: Vir
- * @Last Modified time: 2021-07-18 15:29:11
+ * @Last Modified time: 2021-07-18 21:54:59
  */
 
 import { css, keyframes } from '@emotion/css';
 import React from 'react';
 import { SpinProps } from './interface';
-import SkChase from './SkChase';
+import Chase from './Chase';
 import Spinner from './Spinner';
 
 const SpinBaseCss = () => {
@@ -73,8 +73,8 @@ const InternalSpin: React.FC<SpinProps> = ({
       return indicator;
     }
     switch (type) {
-      case 'skchase':
-        return <SkChase size={size} />;
+      case 'chase':
+        return <Chase size={size} />;
       default:
       case 'spinner':
         return <Spinner size={size} />;
