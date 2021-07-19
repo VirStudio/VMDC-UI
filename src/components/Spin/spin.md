@@ -66,19 +66,19 @@ export default () =>
 </Alert>
 
 ```jsx | pure
-const {Spinner} = Spin;
+const { Plane } = Spin;
 
-<Spinner />
+<Plane />
 ```
 
 ```jsx
 import React from 'react';
 import { Spin }from 'vmdc-ui';
 
-const { Spinner } = Spin;
+const { Plane } = Spin;
 
 export default () => <div style={{background: 'red', padding: '10px'}}>
-  <Spinner />
+  <Plane />
 </div>
 ```
 
@@ -88,12 +88,12 @@ export default () => <div style={{background: 'red', padding: '10px'}}>
 import React from 'react';
 import { Spin } from 'vmdc-ui';
 
-const { Spinner, Chase, Bounce } = Spin;
+const { Plane, Chase, Bounce } = Spin;
 
 export default () =>
 <div style={{background: '#8600FF', padding: '10px'}}>
-  <p style={{color: '#fff'}}>Spinner</p>
-  <Spinner />
+  <p style={{color: '#fff'}}>Plane</p>
+  <Plane />
   <p style={{color: '#fff'}}>Chase</p>
   <Chase />
   <p style={{color: '#fff'}}>Bounce</p>

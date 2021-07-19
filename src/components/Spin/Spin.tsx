@@ -56,7 +56,7 @@ const InternalSpin: React.FC<SpinProps> = ({
   children,
   size = 'medium',
   indicator,
-  type = 'spinner',
+  type = 'plane',
   ...props
 }) => {
   const delay = 100; // 指示器延迟
