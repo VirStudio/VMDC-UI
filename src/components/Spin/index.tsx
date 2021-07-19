@@ -8,19 +8,19 @@
 import Bounce from './Bounce';
 import Chase from './Chase';
 import InternalSpin from './Spin';
-import Spinner from './Spinner';
+import Plane from './Plane';
 
 type InternalSpinType = typeof InternalSpin;
 
 interface SpinInterface extends InternalSpinType {
-  Spinner: typeof Spinner;
+  Plane: typeof Plane;
   Chase: typeof Chase;
   Bounce: typeof Bounce;
 }
 
 const Spin = InternalSpin as SpinInterface;
 
-Spin.Spinner = Spinner;
+Spin.Plane = Plane;
 Spin.Chase = Chase;
 Spin.Bounce = Bounce;
 

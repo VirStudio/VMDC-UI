@@ -9,7 +9,7 @@ import { css, keyframes } from '@emotion/css';
 import React from 'react';
 import { SpinProps } from './interface';
 import Chase from './Chase';
-import Spinner from './Spinner';
+import Plane from './Plane';
 
 const SpinBaseCss = () => {
   return css`
@@ -76,8 +76,8 @@ const InternalSpin: React.FC<SpinProps> = ({
       case 'chase':
         return <Chase size={size} />;
       default:
-      case 'spinner':
-        return <Spinner size={size} />;
+      case 'plane':
+        return <Plane size={size} />;
     }
   };
 

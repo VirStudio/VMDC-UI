@@ -10,6 +10,10 @@ group:
   order: 3
 ---
 
+# Spin 加载中
+
+使用纯CSS编写指示器的Spin组件，支持自定义指示器。
+
 ## 基础
 
 ```jsx
@@ -23,7 +27,7 @@ export default () => <div style={{background: 'red', padding: '10px'}}>
 
 ## 容器
 
-放在一个容器中
+作为容器使用
 
 ```jsx
 import React from 'react';
@@ -31,7 +35,7 @@ import { Spin }from 'vmdc-ui';
 
 export default () =>
   <Spin spinning={true}>
-    <div style={{background: 'green', padding: '200px'}}></div>
+    <div style={{background: 'green', padding: '100px 200px'}}></div>
   </Spin>
 ```
 
@@ -48,7 +52,7 @@ const [spinning, setSpinning] = React.useState(true);
 export default () =>
 <div>
   <Spin spinning={spinning}>
-    <div style={{background: 'green', padding: '200px'}}></div>
+    <div style={{background: 'green', padding: '100px 200px'}}></div>
   </Spin>
   <p>点击按钮切换加载状态</p>
   <Button type="contained" onClick={()=> setSpinning(!spinning)}>{spinning ? '加载中' : '加载完成'}</Button>

@@ -13,9 +13,9 @@ interface SpinItemBaseProps {
   type?: BaseType;
 }
 
-export interface SpinnerProps extends SpinItemBaseProps {}
+export interface PlaneProps extends SpinItemBaseProps {}
 
-export interface SpinnerCSSProps {
+export interface PlaneCSSProps {
   size?: BaseSize;
 }
 
@@ -23,7 +23,7 @@ export interface ChaseProps extends SpinItemBaseProps {}
 
 export interface BounceProps extends SpinItemBaseProps {}
 
-export type SpinType = 'spinner' | 'chase' | 'bounce';
+export type SpinType = 'plane' | 'chase' | 'bounce';
 
 export interface SpinProps {
   /**

@@ -7,9 +7,9 @@
 import { css, keyframes } from '@emotion/css';
 import React from 'react';
 import { SizeMap } from './config';
-import { SpinnerCSSProps, SpinnerProps } from './interface';
+import { PlaneCSSProps, PlaneProps } from './interface';
 
-const SpinnerKeyframes = (size: number) => {
+const PlaneKeyframes = (size: number) => {
   const perspectiveNum = size * 3;
   const tran = (fDeg: number, sDeg: number) =>
     `perspective(${perspectiveNum}px) rotateX(${fDeg}deg) rotateY(${sDeg}deg)`;
@@ -26,18 +26,18 @@ const SpinnerKeyframes = (size: number) => {
   `;
 };
 
-const SpinnerBaseCSS = ({ size = 'medium', ...props }: SpinnerCSSProps) => {
+const PlaneBaseCSS = ({ size = 'medium', ...props }: PlaneCSSProps) => {
   return css`
     display: block;
     width: ${SizeMap[size]}px;
     height: ${SizeMap[size]}px;
     background-color: #fff;
-    animation: ${SpinnerKeyframes(SizeMap[size])} 1.2s infinite ease-in-out;
+    animation: ${PlaneKeyframes(SizeMap[size])} 1.2s infinite ease-in-out;
   `;
 };
 
-const Spinner: React.FC<SpinnerProps> = ({ size = 'medium', ...props }) => {
-  return <i className={SpinnerBaseCSS({ size })} />;
+const Plane: React.FC<PlaneProps> = ({ size = 'medium', ...props }) => {
+  return <i className={PlaneBaseCSS({ size })} />;
 };
 
-export default Spinner;
+export default Plane;
