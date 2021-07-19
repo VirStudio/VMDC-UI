@@ -84,14 +84,16 @@ export default () => <div style={{background: 'red', padding: '10px'}}>
 import React from 'react';
 import { Spin } from 'vmdc-ui';
 
-const { Spinner, SkChase } = Spin;
+const { Spinner, Chase, Bounce } = Spin;
 
 export default () =>
-<div style={{background: 'blue', padding: '10px'}}>
+<div style={{background: '#8600FF', padding: '10px'}}>
   <p style={{color: '#fff'}}>Spinner</p>
   <Spinner />
-  <p style={{color: '#fff'}}>SkChase</p>
-  <SkChase />
+  <p style={{color: '#fff'}}>Chase</p>
+  <Chase />
+  <p style={{color: '#fff'}}>Bounce</p>
+  <Bounce />
 </div>
 ```
 

@@ -16,7 +16,7 @@ export type ButtonColors = 'default' | 'primary' | 'danger';
 // 按钮大小
 export type ButtonSize = BaseSize;
 
-export interface ButtonProps extends HTMLButtonElement {
+export interface ButtonProps {
   /**
    * @description       也可以显式加上描述名
    * @description.zh-CN 还支持不同的 locale 后缀来实现多语言描述
@@ -25,5 +25,5 @@ export interface ButtonProps extends HTMLButtonElement {
   type: ButtonTypes;
   color?: ButtonColors;
   size?: ButtonSize;
-  children: HTMLCollection;
+  children: React.ReactNode;
 }

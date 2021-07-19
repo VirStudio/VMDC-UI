@@ -17,13 +17,6 @@ const ChaseDotDelayCss = () => {
       &:nth-child(${i}) {
         animation-delay: -${1.2 - i / 10}s;
       }
-    `;
-  });
-};
-
-const ChaseDotBeforeDelayCss = () => {
-  return [1, 2, 3, 4, 5, 6].map((i) => {
-    return css`
       &:nth-child(${i})::before {
         animation-delay: -${1.2 - i / 10}s;
       }
@@ -65,7 +58,6 @@ const ChaseDotCss = () => {
     height: 100%;
     animation: ${ChaseDotKeyframes()} 2s infinite ease-in-out both;
     ${ChaseDotDelayCss()}
-    ${ChaseDotBeforeDelayCss()}
     &::before {
       content: '';
       display: block;

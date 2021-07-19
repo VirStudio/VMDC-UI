@@ -8,21 +8,22 @@
 import { ReactNode } from 'react';
 import { BaseSize, BaseType } from '../../types/global';
 
-export interface SpinnerProps {
+interface SpinItemBaseProps {
   size?: BaseSize;
   type?: BaseType;
 }
+
+export interface SpinnerProps extends SpinItemBaseProps {}
 
 export interface SpinnerCSSProps {
   size?: BaseSize;
 }
 
-export interface ChaseProps {
-  size?: BaseSize;
-  type?: BaseType;
-}
+export interface ChaseProps extends SpinItemBaseProps {}
 
-export type SpinType = 'spinner' | 'chase';
+export interface BounceProps extends SpinItemBaseProps {}
+
+export type SpinType = 'spinner' | 'chase' | 'bounce';
 
 export interface SpinProps {
   /**
