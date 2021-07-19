@@ -90,16 +90,41 @@ import { Spin } from 'vmdc-ui';
 
 const { Plane, Chase, Bounce, Stretch } = Spin;
 
+const contentStyle = {
+  background: '#8600FF',
+  padding: '10px',
+  display: 'flex',
+  justifyContent: 'flex-start'
+}
+
+const itemStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'column',
+  paddingBottom: '10px',
+  margin: '10px',
+  width: '60px'
+}
+
 export default () =>
-<div style={{background: '#8600FF', padding: '10px'}}>
-  <p style={{color: '#fff'}}>Plane</p>
-  <Plane />
-  <p style={{color: '#fff'}}>Chase</p>
-  <Chase />
-  <p style={{color: '#fff'}}>Bounce</p>
-  <Bounce />
-  <p style={{color: '#fff'}}>Stretch</p>
-  <Stretch />
+<div style={contentStyle}>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Plane</p>
+    <Plane />
+  </div>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Chase</p>
+    <Chase />
+  </div>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Bounce</p>
+    <Bounce />
+  </div>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Stretch</p>
+    <Stretch />
+  </div>
 </div>
 ```
 
@@ -113,14 +138,37 @@ export default () =>
 import React from 'react';
 import { Spin }from 'vmdc-ui';
 
+const contentStyle = {
+  background: '#2980B9',
+  padding: '10px',
+  display: 'flex',
+  justifyContent: 'flex-start'
+}
+
+const itemStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'column',
+  paddingBottom: '10px',
+  margin: '10px',
+  width: '60px'
+}
+
 export default () =>
-<div style={{background: '#30dff3', padding: '10px'}}>
-  <p style={{color: '#fff'}}>Small</p>
-  <Spin size="small" />
-  <p style={{color: '#fff'}}>Medium</p>
-  <Spin size="medium" />
-  <p style={{color: '#fff'}}>Large</p>
-  <Spin size="large" />
+<div style={contentStyle}>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Small</p>
+    <Spin size="small" />
+  </div>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Medium</p>
+    <Spin size="medium" />
+  </div>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Large</p>
+    <Spin size="large" />
+  </div>
 </div>
 ```
 
