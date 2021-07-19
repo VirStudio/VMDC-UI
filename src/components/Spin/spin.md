@@ -10,7 +10,7 @@ group:
   order: 3
 ---
 
-# Spin 加载中
+# Spin 加载中 <Badge type="warning">开发中</Badge>
 
 使用纯CSS编写指示器的Spin组件，支持自定义指示器。
 
@@ -88,7 +88,7 @@ export default () => <div style={{background: 'red', padding: '10px'}}>
 import React from 'react';
 import { Spin } from 'vmdc-ui';
 
-const { Plane, Chase, Bounce } = Spin;
+const { Plane, Chase, Bounce, Stretch } = Spin;
 
 export default () =>
 <div style={{background: '#8600FF', padding: '10px'}}>
@@ -98,6 +98,8 @@ export default () =>
   <Chase />
   <p style={{color: '#fff'}}>Bounce</p>
   <Bounce />
+  <p style={{color: '#fff'}}>Stretch</p>
+  <Stretch />
 </div>
 ```
 

@@ -2,7 +2,7 @@
  * @Author: Vir
  * @Date: 2021-07-11 11:47:52
  * @Last Modified by: Vir
- * @Last Modified time: 2021-07-18 21:55:18
+ * @Last Modified time: 2021-07-19 15:50:32
  */
 
 import { ReactNode } from 'react';
@@ -22,6 +22,8 @@ export interface PlaneCSSProps {
 export interface ChaseProps extends SpinItemBaseProps {}
 
 export interface BounceProps extends SpinItemBaseProps {}
+
+export interface StretchProps extends SpinItemBaseProps {}
 
 export type SpinType = 'plane' | 'chase' | 'bounce';
 
