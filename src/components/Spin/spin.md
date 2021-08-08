@@ -206,7 +206,6 @@ const itemStyle = {
 export default () =>
 <div style={contentStyle}>
   <div style={itemStyle}>
-    <p style={{color: '#fff'}}>Small</p>
     <Spin size="small" color="#43bdb3" />
   </div>
 </div>

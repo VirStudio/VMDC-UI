@@ -75,20 +75,20 @@ const InternalSpin: React.FC<SpinProps> = ({
     if (indicator) {
       return indicator;
     }
-    const props = {
+    const iconProps = {
       size,
       color,
     };
     switch (type) {
       case 'chase':
-        return <Chase {...props} />;
+        return <Chase {...iconProps} />;
       case 'bounce':
-        return <Bounce {...props} />;
+        return <Bounce {...iconProps} />;
       case 'stretch':
-        return <Stretch {...props} />;
+        return <Stretch {...iconProps} />;
       default:
       case 'plane':
-        return <Plane {...props} />;
+        return <Plane {...iconProps} />;
     }
   };
 
