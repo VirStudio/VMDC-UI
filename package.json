@@ -1,6 +1,6 @@
 {
   "name": "vmdc-ui",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Vir`s Material Design Custom UI",
   "scripts": {
     "start": "dumi dev",
