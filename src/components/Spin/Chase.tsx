@@ -51,7 +51,7 @@ const ChaseDotBeforeKeyframes = () => {
   `;
 };
 
-const ChaseDotCss = () => {
+const ChaseDotCss = (color: string = '#fff') => {
   return css`
     position: absolute;
     width: 100%;
@@ -64,7 +64,7 @@ const ChaseDotCss = () => {
       width: 25%;
       height: 25%;
       border-radius: 100%;
-      background-color: white;
+      background-color: ${color};
       animation: ${ChaseDotBeforeKeyframes()} 2s infinite ease-in-out both;
     }
   `;
@@ -79,11 +79,11 @@ const ChaseBaseCss = (size: BaseSize = 'medium') => {
   `;
 };
 
-const Chase: React.FC<ChaseProps> = ({ size, ...props }) => {
+const Chase: React.FC<ChaseProps> = ({ size, color, ...props }) => {
   return (
     <div className={ChaseBaseCss(size)}>
       {[1, 2, 3, 4, 5, 6].map((i) => (
-        <div key={i} className={ChaseDotCss()}></div>
+        <div key={i} className={ChaseDotCss(color)}></div>
       ))}
     </div>
   );

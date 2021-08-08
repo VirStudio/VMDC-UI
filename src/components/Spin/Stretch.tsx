@@ -32,7 +32,7 @@ const StretchDelayCss = () => {
   });
 };
 
-const StretchBaseCss = (size: BaseSize = 'medium') => {
+const StretchBaseCss = (size: BaseSize = 'medium', color: string = '#fff') => {
   return css`
     /* 宽度：默认宽度 + 边距总和 */
     width: ${SizeMap[size] + SizeMap[size] / 3}px;
@@ -42,7 +42,7 @@ const StretchBaseCss = (size: BaseSize = 'medium') => {
     align-items: center;
     > i {
       height: 100%;
-      background-color: white;
+      background-color: ${color};
       width: ${SizeMap[size] / 5}px;
       animation: ${StretchKeyframes()} 1.2s infinite ease-in-out;
       ${StretchDelayCss()}
@@ -50,9 +50,9 @@ const StretchBaseCss = (size: BaseSize = 'medium') => {
   `;
 };
 
-const Stretch: React.FC<StretchProps> = ({ size, ...props }) => {
+const Stretch: React.FC<StretchProps> = ({ size, color, ...props }) => {
   return (
-    <div className={StretchBaseCss(size)}>
+    <div className={StretchBaseCss(size, color)}>
       {[1, 2, 3, 4, 5].map((i) => (
         <i key={i}></i>
       ))}

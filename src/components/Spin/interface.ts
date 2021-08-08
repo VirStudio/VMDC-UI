@@ -11,12 +11,14 @@ import { BaseSize, BaseType } from '../../types/global';
 interface SpinItemBaseProps {
   size?: BaseSize;
   type?: BaseType;
+  color?: string;
 }
 
 export interface PlaneProps extends SpinItemBaseProps {}
 
 export interface PlaneCSSProps {
   size?: BaseSize;
+  color?: string;
 }
 
 export interface ChaseProps extends SpinItemBaseProps {}
@@ -25,7 +27,7 @@ export interface BounceProps extends SpinItemBaseProps {}
 
 export interface StretchProps extends SpinItemBaseProps {}
 
-export type SpinType = 'plane' | 'chase' | 'bounce';
+export type SpinType = 'plane' | 'chase' | 'bounce' | 'stretch';
 
 export interface SpinProps {
   /**
@@ -53,4 +55,9 @@ export interface SpinProps {
    * @default
    */
   type?: SpinType;
+  /**
+   * @description  指示器颜色
+   * @default #fff
+   */
+  color?: string;
 }

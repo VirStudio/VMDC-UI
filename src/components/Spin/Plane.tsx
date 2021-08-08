@@ -26,18 +26,22 @@ const PlaneKeyframes = (size: number) => {
   `;
 };
 
-const PlaneBaseCSS = ({ size = 'medium', ...props }: PlaneCSSProps) => {
+const PlaneBaseCSS = ({
+  size = 'medium',
+  color = '#fff',
+  ...props
+}: PlaneCSSProps) => {
   return css`
     display: block;
     width: ${SizeMap[size]}px;
     height: ${SizeMap[size]}px;
-    background-color: #fff;
+    background-color: ${color};
     animation: ${PlaneKeyframes(SizeMap[size])} 1.2s infinite ease-in-out;
   `;
 };
 
-const Plane: React.FC<PlaneProps> = ({ size = 'medium', ...props }) => {
-  return <i className={PlaneBaseCSS({ size })} />;
+const Plane: React.FC<PlaneProps> = ({ size = 'medium', color, ...props }) => {
+  return <i className={PlaneBaseCSS({ size, color })} />;
 };
 
 export default Plane;

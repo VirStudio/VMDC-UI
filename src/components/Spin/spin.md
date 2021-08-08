@@ -14,6 +14,10 @@ group:
 
 使用纯CSS编写指示器的Spin组件，支持自定义指示器。
 
+部分指示器来源 [spinkit](https://tobiasahlin.com/spinkit/)
+
+如果有其它相似风格的指示器，*欢迎 Pull requests*。
+
 ## 基础
 
 ```jsx
@@ -168,6 +172,42 @@ export default () =>
   <div style={itemStyle}>
     <p style={{color: '#fff'}}>Large</p>
     <Spin size="large" />
+  </div>
+</div>
+```
+
+## 不同颜色
+
+<Alert type="info">
+  通过设置 color 属性改变指示器的颜色，同时color也适用于单独的指示器
+</Alert>
+
+```jsx
+import React from 'react';
+import { Spin }from 'vmdc-ui';
+
+const contentStyle = {
+  background: '#2980B9',
+  padding: '10px',
+  display: 'flex',
+  justifyContent: 'flex-start'
+}
+
+const itemStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'column',
+  paddingBottom: '10px',
+  margin: '10px',
+  width: '60px'
+}
+
+export default () =>
+<div style={contentStyle}>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Small</p>
+    <Spin size="small" color="#43bdb3" />
   </div>
 </div>
 ```
