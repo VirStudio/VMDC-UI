@@ -9,7 +9,9 @@ import { css, keyframes } from '@emotion/css';
 import React from 'react';
 import { SpinProps } from './interface';
 import Chase from './Chase';
-import Spinner from './Spinner';
+import Plane from './Plane';
+import Bounce from './Bounce';
+import Stretch from './Stretch';
 
 const SpinBaseCss = () => {
   return css`
@@ -56,7 +58,8 @@ const InternalSpin: React.FC<SpinProps> = ({
   children,
   size = 'medium',
   indicator,
-  type = 'spinner',
+  type = 'plane',
+  color = '#fff',
   ...props
 }) => {
   const delay = 100; // 指示器延迟
@@ -72,12 +75,20 @@ const InternalSpin: React.FC<SpinProps> = ({
     if (indicator) {
       return indicator;
     }
+    const iconProps = {
+      size,
+      color,
+    };
     switch (type) {
       case 'chase':
-        return <Chase size={size} />;
+        return <Chase {...iconProps} />;
+      case 'bounce':
+        return <Bounce {...iconProps} />;
+      case 'stretch':
+        return <Stretch {...iconProps} />;
       default:
-      case 'spinner':
-        return <Spinner size={size} />;
+      case 'plane':
+        return <Plane {...iconProps} />;
     }
   };
 

@@ -10,6 +10,14 @@ group:
   order: 3
 ---
 
+# Spin 加载中 <Badge type="warning">开发中</Badge>
+
+使用纯CSS编写指示器的Spin组件，支持自定义指示器。
+
+部分指示器来源 [spinkit](https://tobiasahlin.com/spinkit/)
+
+如果有其它相似风格的指示器，*欢迎 Pull requests*。
+
 ## 基础
 
 ```jsx
@@ -23,7 +31,7 @@ export default () => <div style={{background: 'red', padding: '10px'}}>
 
 ## 容器
 
-放在一个容器中
+作为容器使用
 
 ```jsx
 import React from 'react';
@@ -31,7 +39,7 @@ import { Spin }from 'vmdc-ui';
 
 export default () =>
   <Spin spinning={true}>
-    <div style={{background: 'green', padding: '200px'}}></div>
+    <div style={{background: 'green', padding: '100px 200px'}}></div>
   </Spin>
 ```
 
@@ -48,7 +56,7 @@ const [spinning, setSpinning] = React.useState(true);
 export default () =>
 <div>
   <Spin spinning={spinning}>
-    <div style={{background: 'green', padding: '200px'}}></div>
+    <div style={{background: 'green', padding: '100px 200px'}}></div>
   </Spin>
   <p>点击按钮切换加载状态</p>
   <Button type="contained" onClick={()=> setSpinning(!spinning)}>{spinning ? '加载中' : '加载完成'}</Button>
@@ -62,19 +70,19 @@ export default () =>
 </Alert>
 
 ```jsx | pure
-const {Spinner} = Spin;
+const { Plane } = Spin;
 
-<Spinner />
+<Plane />
 ```
 
 ```jsx
 import React from 'react';
 import { Spin }from 'vmdc-ui';
 
-const { Spinner } = Spin;
+const { Plane } = Spin;
 
 export default () => <div style={{background: 'red', padding: '10px'}}>
-  <Spinner />
+  <Plane />
 </div>
 ```
 
@@ -84,16 +92,43 @@ export default () => <div style={{background: 'red', padding: '10px'}}>
 import React from 'react';
 import { Spin } from 'vmdc-ui';
 
-const { Spinner, Chase, Bounce } = Spin;
+const { Plane, Chase, Bounce, Stretch } = Spin;
+
+const contentStyle = {
+  background: '#8600FF',
+  padding: '10px',
+  display: 'flex',
+  justifyContent: 'flex-start'
+}
+
+const itemStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'column',
+  paddingBottom: '10px',
+  margin: '10px',
+  width: '60px'
+}
 
 export default () =>
-<div style={{background: '#8600FF', padding: '10px'}}>
-  <p style={{color: '#fff'}}>Spinner</p>
-  <Spinner />
-  <p style={{color: '#fff'}}>Chase</p>
-  <Chase />
-  <p style={{color: '#fff'}}>Bounce</p>
-  <Bounce />
+<div style={contentStyle}>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Plane</p>
+    <Plane />
+  </div>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Chase</p>
+    <Chase />
+  </div>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Bounce</p>
+    <Bounce />
+  </div>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Stretch</p>
+    <Stretch />
+  </div>
 </div>
 ```
 
@@ -107,14 +142,72 @@ export default () =>
 import React from 'react';
 import { Spin }from 'vmdc-ui';
 
+const contentStyle = {
+  background: '#2980B9',
+  padding: '10px',
+  display: 'flex',
+  justifyContent: 'flex-start'
+}
+
+const itemStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'column',
+  paddingBottom: '10px',
+  margin: '10px',
+  width: '60px'
+}
+
 export default () =>
-<div style={{background: '#30dff3', padding: '10px'}}>
-  <p style={{color: '#fff'}}>Small</p>
-  <Spin size="small" />
-  <p style={{color: '#fff'}}>Medium</p>
-  <Spin size="medium" />
-  <p style={{color: '#fff'}}>Large</p>
-  <Spin size="large" />
+<div style={contentStyle}>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Small</p>
+    <Spin size="small" />
+  </div>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Medium</p>
+    <Spin size="medium" />
+  </div>
+  <div style={itemStyle}>
+    <p style={{color: '#fff'}}>Large</p>
+    <Spin size="large" />
+  </div>
+</div>
+```
+
+## 不同颜色
+
+<Alert type="info">
+  通过设置 color 属性改变指示器的颜色，同时color也适用于单独的指示器
+</Alert>
+
+```jsx
+import React from 'react';
+import { Spin }from 'vmdc-ui';
+
+const contentStyle = {
+  background: '#2980B9',
+  padding: '10px',
+  display: 'flex',
+  justifyContent: 'flex-start'
+}
+
+const itemStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'column',
+  paddingBottom: '10px',
+  margin: '10px',
+  width: '60px'
+}
+
+export default () =>
+<div style={contentStyle}>
+  <div style={itemStyle}>
+    <Spin size="small" color="#43bdb3" />
+  </div>
 </div>
 ```
 

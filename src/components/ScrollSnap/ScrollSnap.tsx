@@ -37,16 +37,16 @@ const InternalScrollSnap: React.FC<ScrollSnapProps> = ({
     <div
       className={ScrollSnapBaseCss(location, type)}
       onScroll={(e) => {
-        console.log(e);
+        // console.log(e);
       }}
       {...props}
     >
       {React.Children.map(children, (child) => {
-        if (child.type.name !== 'Item') {
-          throw new Error(
-            'the children of component ScrollSnap muse be component ScrollSnap.Item',
-          );
-        }
+        // if (child.type.name !== 'Item') {
+        //   throw new Error(
+        //     `the children of component ScrollSnap muse be component ScrollSnap.Item. Now children name: ${child.type.name}`,
+        //   );
+        // }
         return React.cloneElement(child, {
           ...child.props,
           ...{ align, stop },

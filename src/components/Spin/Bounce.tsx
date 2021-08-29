@@ -22,7 +22,7 @@ const BounceBeforeKeyframes = () => {
   `;
 };
 
-const BounceBaseCss = (size: BaseSize = 'medium') => {
+const BounceBaseCss = (size: BaseSize = 'medium', color: string = '#fff') => {
   return css`
     display: block;
     width: ${SizeMap[size]}px;
@@ -34,7 +34,7 @@ const BounceBaseCss = (size: BaseSize = 'medium') => {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: white;
+      background-color: ${color};
       border-radius: 50%;
       top: 0;
       left: 0;
@@ -47,8 +47,8 @@ const BounceBaseCss = (size: BaseSize = 'medium') => {
   `;
 };
 
-const Bounce: React.FC<BounceProps> = ({ size, ...props }) => {
-  return <i className={BounceBaseCss(size)}></i>;
+const Bounce: React.FC<BounceProps> = ({ size, color, ...props }) => {
+  return <i className={BounceBaseCss(size, color)}></i>;
 };
 
 export default Bounce;
