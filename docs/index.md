@@ -1,6 +1,15 @@
 ---
 title: 介绍
 order: 1
+sidemenu: false
+hero:
+  title: VMDC-UI
+  desc: Material Design 风格的 UI 库。
+  actions:
+    - text: 安装
+      link: /installation
+    - text: 文档
+      link: /components
 ---
 
 ## 介绍
