@@ -86,8 +86,9 @@ const Progress: React.FC<ProgressProps> = (props) => {
 
   // 校验分段显示百分比总计
   if (section) {
-    const count: number = section.reduce(
-      (prev, next): number => prev.percent + next.percent,
+    const count = section.reduce<number>(
+      (percent, next) => percent + next.percent,
+      0,
     );
     if (count > 100) {
       throw new Error('The percentage cannot be greater than 100');
