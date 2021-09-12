@@ -2,7 +2,7 @@
  * @Author: Vir
  * @Date: 2021-07-12 17:36:17
  * @Last Modified by: Vir
- * @Last Modified time: 2021-07-18 21:54:59
+ * @Last Modified time: 2021-09-12 19:42:56
  */
 
 import { css, keyframes } from '@emotion/css';
@@ -97,9 +97,11 @@ const InternalSpin: React.FC<SpinProps> = ({
       {children ? (
         <div className={SpinBaseCss()}>
           {staticSpinning && (
-            <div className={SpinIndicatorCss(spinning)}>{renderIcon()}</div>
+            <div className={SpinIndicatorCss(staticSpinning)}>
+              {renderIcon()}
+            </div>
           )}
-          <div className={SpinContentCss(spinning)}>{children}</div>
+          <div className={SpinContentCss(staticSpinning)}>{children}</div>
         </div>
       ) : (
         renderIcon()
