@@ -9,6 +9,7 @@ export default defineConfig({
     port: 8080,
   },
   build: {
+    outDir: "lib",
     lib: {
       entry: "./src/main.tsx",
       name: "core",
