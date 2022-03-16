@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/VirStudio/VMDC-UI/issues"
   },
+  "maintainers": [
+    "virzs <2369310227@qq.com>"
+  ],
   "gitHead": "013d68fe0bfa24a281423377d6997257593b1233"
 }

@@ -32,5 +32,8 @@
     "typescript": "^4.5.4",
     "vite": "^2.8.0"
   },
+  "maintainers": [
+    "virzs <2369310227@qq.com>"
+  ],
   "gitHead": "013d68fe0bfa24a281423377d6997257593b1233"
 }
