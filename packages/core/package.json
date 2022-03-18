@@ -2,7 +2,7 @@
   "name": "@mdcui/core",
   "version": "0.0.7",
   "description": "> TODO: description",
-  "author": "virzs <2369310227@qq.com>",
+  "author": "virzs <virs98@outlook.com>",
   "homepage": "https://github.com/VirStudio/VMDC-UI/tree/main/packages/core#readme",
   "license": "GPL-3.0-or-later",
   "main": "lib/index.js",
@@ -32,5 +32,8 @@
     "typescript": "^4.5.4",
     "vite": "^2.8.0"
   },
+  "maintainers": [
+    "virzs <virs98@outlook.com>"
+  ],
   "gitHead": "9da51f83f6e67c493a96a7df9b9d66294a0f3a5b"
 }
