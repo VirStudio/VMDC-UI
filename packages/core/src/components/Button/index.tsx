@@ -8,7 +8,7 @@
 import React from "react";
 
 const Button = (props) => {
-  return <button></button>;
+  return <button>1</button>;
 };
 
 export default Button;
