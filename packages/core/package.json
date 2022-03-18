@@ -1,6 +1,6 @@
 {
   "name": "@mdcui/core",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "> TODO: description",
   "author": "virzs <virs98@outlook.com>",
   "homepage": "https://github.com/VirStudio/VMDC-UI/tree/main/packages/core#readme",
@@ -35,5 +35,5 @@
   "maintainers": [
     "virzs <virs98@outlook.com>"
   ],
-  "gitHead": "fe2b778779bac5b86594efe0dddc8b6ec627cdc9"
+  "gitHead": "06bf296ff4a0b5c7e6ff707e733d630b67c11c4a"
 }
