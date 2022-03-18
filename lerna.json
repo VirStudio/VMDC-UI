@@ -1,4 +1,9 @@
 {
   "packages": ["packages/*"],
-  "version": "independent"
+  "version": "independent",
+  "command": {
+    "publish": {
+      "registry": "https://registry.npmjs.org"
+    }
+  }
 }
